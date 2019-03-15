@@ -1,1 +1,12 @@
 train
+train_data0
+train_data1
+train_data2
+train_data3
+train_data4
+train_data5
+train_data
+test
+data_train
+data_test
+model1.h5

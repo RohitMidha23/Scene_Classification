@@ -11,3 +11,5 @@ data_train
 data_test
 model1.h5
 .ipynb_checkpoints
+saved_models
+train-scene

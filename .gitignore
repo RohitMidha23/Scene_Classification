@@ -13,3 +13,5 @@ model1.h5
 .ipynb_checkpoints
 saved_models
 train-scene
+vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5
+vgg19_weights_tf_dim_ordering_tf_kernels_notop.h5

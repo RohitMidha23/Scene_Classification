@@ -1,21 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-import keras
-
-
-# In[ ]:
-
-
-import tensorflow
-
-
-# In[1]:
-
-
 from keras.models import Sequential
 from scipy.misc import imread
 get_ipython().magic('matplotlib inline')
@@ -32,7 +14,7 @@ from keras.applications.vgg16 import decode_predictions
 from keras.applications.vgg16 import preprocess_input
 from keras.preprocessing.image import img_to_array
 from keras.preprocessing.image import load_img
-import argparse 
+import argparse
 
 import os
 import tarfile
@@ -71,7 +53,7 @@ for i in range(len(train)):
     temp_img=load_img(image_path+train['image_name'][i],target_size=(224,224))
     temp_img=image.img_to_array(temp_img)
     train_img.append(temp_img)
-    
+
 train_img=np.array(train_img)
 train_img=preprocess_input(train_img)
 
@@ -162,7 +144,7 @@ model.add(Activation('softmax'))
 
 model.compile(loss='categorical_crossentropy', optimizer="adam", metrics=['accuracy'])
 
-# fitting the model 
+# fitting the model
 
 model.fit(X_train, Y_train, epochs=20, batch_size=30,validation_data=(X_valid,Y_valid))
 
@@ -178,21 +160,21 @@ validation_x=features_test.reshape(7301,100352)
 
 classes = model.predict(validation_x, batch_size=30)
 class_labels = np.argmax(classes, axis=1)
-class_labels_dt=pd.DataFrame(class_labels)
-class_labels_dt.columns=['label']
+labels=pd.DataFrame(class_labels)
+labels.columns=['label']
 
 
 # In[20]:
 
 
-class_labels_dt.head()
+labels.head()
 
 
 # In[21]:
 
 
-frames=[test,class_labels_dt]
-result = pd.concat(frames,axis=1)
+list=[test,labels]
+result = pd.concat(list,axis=1)
 
 
 # In[22]:
@@ -205,27 +187,3 @@ result.head()
 
 
 result.to_csv('resnet50_15.csv')
-
-
-# In[24]:
-
-
-save_dir = os.path.join(os.getcwd(), 'saved_models')
-model_name = 'trained_resnet50_model_15.h5'
-
-
-# In[25]:
-
-
-if not os.path.isdir(save_dir):
-    os.makedirs(save_dir)
-model_path = os.path.join(save_dir, model_name)
-model.save(model_path)
-print('Saved trained model at %s ' % model_path)
-
-
-# In[ ]:
-
-
-
-

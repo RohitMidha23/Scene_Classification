@@ -1,6 +1,7 @@
 from keras.models import Sequential
 from scipy.misc import imread
-get_ipython().magic('matplotlib inline')
+
+#get_ipython().magic('matplotlib inline')
 import matplotlib.pyplot as plt
 import numpy as np
 import keras

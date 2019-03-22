@@ -16,3 +16,4 @@ train-scene
 vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5
 vgg19_weights_tf_dim_ordering_tf_kernels_notop.h5
 .DS_Store
+approach2

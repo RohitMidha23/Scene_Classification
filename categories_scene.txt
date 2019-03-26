@@ -1,0 +1,6 @@
+/a/building 0
+/a/forest 1
+/a/glacier 2
+/a/mountain 3
+/a/sea 4
+/a/street 5

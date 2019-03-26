@@ -20,3 +20,6 @@ approach2
 data-train
 resnet50_places365.pth.tar
 densenet161_places365.pth.tar
+*.caffemodel
+*.prototxt
+*.pyc

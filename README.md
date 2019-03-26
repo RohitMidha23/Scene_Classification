@@ -34,4 +34,9 @@ For doing that you can try out `data_load.py` but make sure to keep a copy of th
 
 Once you split into the classes you don't need to split again into train and validation. My code takes care of that.
 
-2. For some reason when you save the file to_csv the index is added so open it in excel/numbers and delete the column. Export to csv and then submit if you want. 
+2. For some reason when you save the file to_csv the index is added so open it in excel/numbers and delete the column. Export to csv and then submit if you want.
+
+
+3. Run commands to convert caffe to pytorch
+
+ mmtoir -f caffe -n deploy_resnet152_places365.prototxt -w resnet152_places365.caffemodel -o caffe_resnet_IR

@@ -18,3 +18,5 @@ vgg19_weights_tf_dim_ordering_tf_kernels_notop.h5
 .DS_Store
 approach2
 data-train
+resnet50_places365.pth.tar
+densenet161_places365.pth.tar

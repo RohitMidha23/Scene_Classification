@@ -38,5 +38,6 @@ Once you split into the classes you don't need to split again into train and val
 
 
 3. Run commands to convert caffe to pytorch
+( doesn't work need to install caffe which is not available for windows )
 
  mmtoir -f caffe -n deploy_resnet152_places365.prototxt -w resnet152_places365.caffemodel -o caffe_resnet_IR

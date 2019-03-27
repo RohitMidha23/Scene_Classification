@@ -131,7 +131,7 @@ class Net(nn.Module):
 				if k in state_dict:
 					state_dict[k].resize_(v.shape).copy_(torch.from_numpy(numpy.array(v)))
 			print('caffemodel2pytorch: loaded model from [{}] in HDF5 format'.format(weights))
-		except Exception, e:
+		except:
 			print('caffemodel2pytorch: loading model from [{}] in HDF5 format failed [{}], falling back to caffemodel format'.format(weights, e.message))
 			bytes_weights = open(weights).read()
 			bytes_parsed = self.net_param.ParseFromString(bytes_weights)
